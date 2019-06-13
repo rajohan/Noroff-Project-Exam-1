@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="SpaceX Launches. Keeps you updated on SpaceX launches">
+        <meta name="keywords" content="SpaceX, Space, launches, astronauts, rockets, moon, mars">
+        <meta name="author" content="Raymond Johannessen, Raymond Johannessen Webutvikling">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Iceland&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+        <title>SpaceX Launches - Launches</title>
+    </head>
+    <body>
+        <header>
+            <section id="headerTop">
+                <p id="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    Launches
+                </p>
+            </section>
+            <section id="headerMiddle">
+                <p id="countdownTop">Next Launch In</p>
+                <p id="countdownTime"><!-- Countdown time loaded by JavaScript --></p>
+            </section>
+            <section id="headerBottom">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a><span>-</span></li>
+                        <li class="active"><a href="launches.html">Launches</a><span>-</span></li>
+                        <li><a href="about.html">About</a><span>-</span></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section class="launchesHeader">
+                <h1>Launches</h1>
+                <div class="marginBottom">
+                    <button id="pastLaunches" class="slider active">Past Launches</button>
+                    <button id="upcomingLaunches" class="slider">Upcoming Launches</button>
+                </div>
+            </section>
+            <section id="launches" class="marginTopSmall">
+                <!-- Upcoming/past launches loaded by JavaScript -->
+            </section>
+        </main>
+        <footer>
+            <section class="darkBox">
+                <div class="contentBox marginTop">
+                    <div id="socialIconsWrapper">
+                        <a href="https://www.facebook.com/SpaceX-226435907904104/" target="_blank"><img src="images/facebook.png" class="socialIcon" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/spacex/" target="_blank"><img src="images/instagram.png" class="socialIcon" alt="Instagram"></a>
+                        <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" target="_blank"><img src="images/youtube.png" class="socialIcon" alt="Youtube"></a>
+                        <a href="https://twitter.com/spacex" target="_blank"><img src="images/twitter.png" class="socialIcon" alt="Twitter"></a>
+                    </div>
+                    <p>Copyright&nbsp;©&nbsp;2019 <a href="https://rajohan.no" target="_blank">Raymond&nbsp;Johannessen&nbsp;Webutvikling</a>. All&nbsp;rights&nbsp;reserved.</p>
+                </div>
+            </section>
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="js/launches.js"></script>
+    </body>
+</html>

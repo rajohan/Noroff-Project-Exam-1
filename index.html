@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="SpaceX Launches. Keeps you updated on SpaceX launches">
+        <meta name="keywords" content="SpaceX, Space, launches, astronauts, rockets, moon, mars">
+        <meta name="author" content="Raymond Johannessen, Raymond Johannessen Webutvikling">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Iceland&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+        <title>SpaceX Launches - Home</title>
+    </head>
+    <body>
+        <header>
+            <section id="headerTop">
+                <p id="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    Launches
+                </p>
+            </section>
+            <section id="headerMiddle">
+                <p id="countdownTop">Next Launch In</p>
+                <p id="countdownTime"><!-- Countdown time loaded by JavaScript --></p>
+            </section>
+            <section id="headerBottom">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a><span>-</span></li>
+                        <li><a href="launches.html">Launches</a><span>-</span></li>
+                        <li><a href="about.html">About</a><span>-</span></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section class="darkBox">
+                <h1>Welcome to SpaceX launches</h1>
+                <div id="welcome" class="contentBox">
+                    <p>
+                        SpaceX launches is SpaceX's new microsite to raise awareness about space program activity around the world.
+                    </p>
+                    <p>
+                        SpaceX launches main purpose is to promote SpaceX launches and keep you up to date on upcoming and past launches.
+                    </p>
+                    <p>
+                        We will also provide you with some other space related information.
+                    </p>
+                    <a href="launches.html" class="buttonLight marginTop">See All Launches</a>
+                </div>
+            </section>
+            <section class="launchWrapperLight">
+                <h2>
+                    Next launch
+                </h2>
+                <div id="nextLaunch" class="launchDetailsWrapper">
+                    <!-- Next launch loaded by javascript -->
+                </div>
+                <a class="launchMoreInformation buttonDark marginBottom marginTop">More Information</a>
+                <div class="launchMoreDetailsWrapper">
+                    <div id="rocketInfo" class="launchRocketType">
+                        <!-- Rocket info loaded by javascript -->
+                    </div>
+                    <div id="launchPadInfo" class="launchLaunchPad">
+                        <!-- Launch pad info loaded by javascript -->
+                    </div>
+                </div>
+                <a href="launches.html" class="buttonLight">See All Launches</a>
+            </section>
+            <section id="astronauts" class="darkBox">
+                <!-- People in space loaded by javascript -->
+            </section>
+            <section id="iss" class="lightBox">
+                <h2>The ISS current position</h2>
+                <div id="issMap" class="contentBox">
+                    <!-- Google maps loaded by javascript -->
+                </div>
+                <img id="issImage" src="images/iss.png" alt="ISS">
+            </section>
+            <section class="darkBox">
+                <h2 class="marginBottomNone">Astronomy picture of the day</h2>
+                <div id="apod" class="contentBox">
+                    <!-- APOD loaded by javascript -->
+                </div>
+            </section>
+            <section class="lightBox">
+                <h2>Sign up for our newsletters</h2>
+                <div id="newsletterWrapper" class="contentBox">
+                    <p>Get the latest news and updates on launches</p>
+                    <div id="emailError" class="error">Invalid email. E.g. email@website.com.</div>
+                    <div id="newsletter">
+                        <input id="email" type="email" placeholder="Your email address">
+                        <button id="newsletterConfirm" class="buttonLight">Sign up</button>
+                    </div>
+                </div>
+            </section>
+            <div id="newsletterConfirmMessage">
+                <p>Thanks, you are now signed up newsletters.</p>
+                <p>Newsletters will now be sent to you.</p>
+                <button id="newsletterConfirmMessageConfirm" class="buttonLight marginTop">Ok</button>
+            </div>
+        </main>
+        <footer>
+            <section class="darkBox">
+                <div class="contentBox marginTop">
+                    <div id="socialIconsWrapper">
+                        <a href="https://www.facebook.com/SpaceX-226435907904104/" target="_blank"><img src="images/facebook.png" class="socialIcon" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/spacex/" target="_blank"><img src="images/instagram.png" class="socialIcon" alt="Instagram"></a>
+                        <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" target="_blank"><img src="images/youtube.png" class="socialIcon" alt="Youtube"></a>
+                        <a href="https://twitter.com/spacex" target="_blank"><img src="images/twitter.png" class="socialIcon" alt="Twitter"></a>
+                    </div>
+                    <p>Copyright&nbsp;©&nbsp;2019 <a href="https://rajohan.no" target="_blank">Raymond&nbsp;Johannessen&nbsp;Webutvikling</a>. All&nbsp;rights&nbsp;reserved.</p>
+                </div>
+            </section>
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

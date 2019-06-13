@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="SpaceX Launches. Keeps you updated on SpaceX launches">
+        <meta name="keywords" content="SpaceX, Space, launches, astronauts, rockets, moon, mars">
+        <meta name="author" content="Raymond Johannessen, Raymond Johannessen Webutvikling">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Iceland&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+        <title>SpaceX Launches - Contact</title>
+    </head>
+    <body>
+        <header>
+            <section id="headerTop">
+                <p id="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    Launches
+                </p>
+            </section>
+            <section id="headerMiddle">
+                <p id="countdownTop">Next Launch In</p>
+                <p id="countdownTime"><!-- Countdown time loaded by JavaScript --></p>
+            </section>
+            <section id="headerBottom">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a><span>-</span></li>
+                        <li><a href="launches.html">Launches</a><span>-</span></li>
+                        <li><a href="about.html">About</a><span>-</span></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section>
+                <h1>Contact</h1>
+            </section>
+            <section class="lightBox" id="contact">
+                <div id="contactForm">
+                    <label for="name" class="marginTop">Your name</label>
+                    <input id="name" type="text" placeholder="E.g. Jane Doe">
+                    <div id="nameError" class="error">Invalid name. Cannot be empty.</div>
+                    <label for="email" class="marginTopSmall">Your email</label>
+                    <input id="email" type="email" placeholder="E.g. email@website.com">
+                    <div id="emailError" class="error">Invalid email. E.g. email@website.com.</div>
+                    <label for="subject" class="marginTopSmall">Subject</label>
+                    <input id="subject" type="text" placeholder="E.g. More info about SpaceX">
+                    <div id="subjectError" class="error">Invalid subject. Cannot be empty.</div>
+                    <label for="message" class="marginTopSmall">Your message</label>
+                    <textarea id="message" placeholder="Start typing..."></textarea>
+                    <div id="messageError" class="error">Invalid message. Cannot be empty.</div>
+                    <button id="contactSubmit" class="buttonLight marginTop">Send Message</button>
+                </div>
+                <div id="contactInfo">
+                    <div id="contactInfoTop">
+                        <div id="contactInfoLeft">
+                            <h3>SpaceX Headquarters</h3>
+                            <p>Rocket Road Hawthorne</p>
+                            <p>California</p>
+                            <h3>Telephone</h3>
+                            <p><a href="tel:310-363-6000">310-363-6000</a></p>
+                        </div>
+                        <div id="contactInfoRight">
+                            <h3>Media Inquiries</h3>
+                            <p><a href="mailto:media@spacex.com">media@spacex.com</a></p>
+                            <h3>Sales Inquiries</h3>
+                            <p><a href="mailto:sales@spacex.com">sales@spacex.com</a></p>
+                        </div>
+                    </div>
+                    <iframe
+                            frameborder="0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDHbQ18mziq_w3Y_VNjQnOEdp-s6RIEd-0&zoom=15&q=33.920692,-118.328277"
+                            allowfullscreen
+                    >
+                    </iframe>
+                </div>
+            </section>
+            <div id="contactConfirmMessage">
+                <p>Your message has been sent successfully.</p>
+                <p>You will get a response within 24 hours!</p>
+                <button id="contactConfirmMessageConfirm" class="buttonLight marginTop">Ok</button>
+            </div>
+        </main>
+        <footer>
+            <section class="darkBox">
+                <div class="contentBox marginTop">
+                    <div id="socialIconsWrapper">
+                        <a href="https://www.facebook.com/SpaceX-226435907904104/" target="_blank"><img src="images/facebook.png" class="socialIcon" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/spacex/" target="_blank"><img src="images/instagram.png" class="socialIcon" alt="Instagram"></a>
+                        <a href="https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA" target="_blank"><img src="images/youtube.png" class="socialIcon" alt="Youtube"></a>
+                        <a href="https://twitter.com/spacex" target="_blank"><img src="images/twitter.png" class="socialIcon" alt="Twitter"></a>
+                    </div>
+                    <p>Copyright&nbsp;©&nbsp;2019 <a href="https://rajohan.no" target="_blank">Raymond&nbsp;Johannessen&nbsp;Webutvikling</a>. All&nbsp;rights&nbsp;reserved.</p>
+                </div>
+            </section>
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="js/contact.js"></script>
+    </body>
+</html>
