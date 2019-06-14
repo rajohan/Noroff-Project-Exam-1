@@ -1,9 +1,20 @@
 (() => {
     // Array to hold fields touched
-    const touched = [];
+    let touched = [];
+    let messageSent = false;
 
     // Validate contact form
-    const validateContact = (e) => {
+    const validateContact = e => {
+        e.preventDefault();
+
+        // Check if message just was sent to prevent error messages from showing up because of field value reset.
+        if(messageSent) {
+            touched = [];
+            document.activeElement.blur();
+            messageSent = false;
+            return;
+        }
+
         const {name, email, subject} = document.getElementsByTagName("input");
         const message = document.getElementById("message");
         const {nameError, emailError, subjectError, messageError} = document.getElementsByClassName("error");
@@ -37,7 +48,7 @@
         // Check if there are any errors and toggle error messages
         for (let key in errors) {
             if (errors.hasOwnProperty(key)) {
-                if(!touched.includes(key) && e.target.id !== "contactSubmit") {
+                if(!touched.includes(key) && e.target.id !== "contactForm") {
                     errorCount++;
                     continue;
                 }
@@ -46,8 +57,8 @@
                     errors[key].field.style.display = "block";
                     errors[key].input.classList.add("inputError");
 
-                    if(!touched.includes(e.target.id)) {
-                        touched.push(e.target.id);
+                    if(!touched.includes(key)) {
+                        touched.push(key);
                     }
 
                     errorCount++;
@@ -59,9 +70,10 @@
         }
 
         // All fields ok, ready to submit
-        if (errorCount === 0 && e.target.id === "contactSubmit") {
+        if (errorCount === 0 && e.target.id === "contactForm") {
             document.getElementById("contactConfirmMessage").style.display = "flex";
 
+            messageSent = true;
             name.value = "";
             email.value = "";
             subject.value = "";
@@ -74,9 +86,9 @@
         document.getElementById("contactConfirmMessage").style.display = "none";
     }, false);
 
-    // Setup event listener for the contactSubmit button
-    const submitContact = document.getElementById("contactSubmit");
-    submitContact.addEventListener("click", validateContact, false);
+    // Setup event listener for the contactForm submit event
+    const submitContact = document.getElementById("contactForm");
+    submitContact.addEventListener("submit", e => validateContact(e), false);
 
     // Setup input event listeners
     const inputFields = ["name", "email", "subject", "message"];

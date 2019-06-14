@@ -40,7 +40,7 @@
                 <h1>Contact</h1>
             </section>
             <section class="lightBox" id="contact">
-                <div id="contactForm">
+                <form id="contactForm" method="POST" novalidate>
                     <label for="name" class="marginTop">Your name</label>
                     <input id="name" type="text" placeholder="E.g. Jane Doe">
                     <div id="nameError" class="error">Invalid name. Cannot be empty.</div>
@@ -54,7 +54,7 @@
                     <textarea id="message" placeholder="Start typing..."></textarea>
                     <div id="messageError" class="error">Invalid message. Cannot be empty.</div>
                     <button id="contactSubmit" class="buttonLight marginTop">Send Message</button>
-                </div>
+                </form>
                 <div id="contactInfo">
                     <div id="contactInfoTop">
                         <div id="contactInfoLeft">

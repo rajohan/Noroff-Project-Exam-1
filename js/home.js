@@ -119,7 +119,9 @@
     getNextLaunch();
 
     // Validate newsletter email
-    const validateNewsletter = () => {
+    const validateNewsletter = e => {
+        e.preventDefault();
+
         const email = document.getElementById("email");
         const emailError = document.getElementById("emailError");
         const emailRegex = new RegExp(/^[A-Za-z0-9][a-zA-Z0-9._-]{1,}@[a-zA-Z0-9-]{2,}\.[a-zA-Z0-9.-]{2,}$/);
@@ -133,8 +135,8 @@
         }
     };
 
-    // Setup event listener for the contactSubmit button
-    document.getElementById("newsletterConfirm").addEventListener("click", validateNewsletter, false);
+    // Setup event listener for the newsletter form submit event
+    document.getElementById("newsletter").addEventListener("submit", e => validateNewsletter(e), false);
 
     // Event listener for modal confirm button
     document.getElementById("newsletterConfirmMessageConfirm").addEventListener("click", () => {
