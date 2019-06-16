@@ -510,6 +510,10 @@ a.buttonLight {
     padding-bottom: 1rem;
 }
 
+.launchDetailMain {
+    width: 100%;
+}
+
 .launchWrapperLight,
 .launchWrapperDark {
     display: flex;
@@ -754,6 +758,12 @@ a.buttonLight {
         width: 40rem;
         min-width: 40rem;
         height: 26.7rem;
+    }
+
+    .launchDetailMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .launchDetailTop {
