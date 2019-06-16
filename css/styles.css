@@ -61,7 +61,7 @@ header {
     background: url("../images/header.jpg") no-repeat center center;
     background-size: cover;
     height: 54.5rem;
-    box-shadow: 0 0 1rem 1rem #070C0F inset;
+    box-shadow: 0 -1.3rem 1rem -0.4rem #070C0F inset;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
