@@ -26,12 +26,12 @@
         people.forEach(people => peopleList += `<p>${people.name}</p>`);
 
         document.getElementById("astronauts").innerHTML = `
-        <img src="images/astronaut.png" alt="Astronaut">
-        <h2>There are currently ${number} astronauts in space</h2>
-        <div class="contentBox">
-            ${peopleList}
-        </div>
-    `;
+            <img src="images/astronaut.png" alt="Astronaut">
+            <h2>There are currently ${number} astronauts in space</h2>
+            <div class="contentBox">
+                ${peopleList}
+            </div>
+        `;
     };
 
     const getPeopleInSpace = () => {
@@ -46,10 +46,10 @@
     // Get APOD
     const renderApod = (url, title, copyright) => {
         document.getElementById("apod").innerHTML = `
-        <h3>${title}</h3>
-        ${copyright ? "<h4>Copyrighted to" + copyright + "</h4>" : "<h4></h4>"}
-        <img class="bigImage marginTopSmall" alt="Astronomy picture of the day" src="${url}"/>
-    `;
+            <h3>${title}</h3>
+            ${copyright ? "<h4>Copyrighted to" + copyright + "</h4>" : "<h4></h4>"}
+            <img class="bigImage marginTopSmall" alt="Astronomy picture of the day" src="${url}"/>
+        `;
     };
 
     const getApod = () => {
@@ -76,23 +76,23 @@
         }
 
         document.getElementById("nextLaunch").innerHTML = `
-        <img alt="Mission image" src="${image}"/>
-        <div class="launchDetailMain">
-            <div class="launchDetailTop">
-                <div class="launchDetailTopLeft">
-                    <h3>Mission #${flight_number}</h3>
-                    <h4>${mission_name}</h4>
+            <img alt="Mission image" src="${image}"/>
+            <div class="launchDetailMain">
+                <div class="launchDetailTop">
+                    <div class="launchDetailTopLeft">
+                        <h3>Mission #${flight_number}</h3>
+                        <h4>${mission_name}</h4>
+                    </div>
+                    <div class="launchDetailTopRight">
+                        <h3>Launch Date</h3>
+                        <h4>${formattedDate}</h4>
+                    </div>
                 </div>
-                <div class="launchDetailTopRight">
-                    <h3>Launch Date</h3>
-                    <h4>${formattedDate}</h4>
-                </div>
+                <p>
+                    ${details}
+                </p>
             </div>
-            <p>
-                ${details}
-            </p>
-        </div>
-    `;
+        `;
     };
 
     const getRocketImage = (data) => {

@@ -54,37 +54,37 @@
             const wrapper = document.createElement("div");
             wrapper.className = state.wrapperClass;
             wrapper.innerHTML = `
-            <div class="${state.wrapperClass}">
-                <div class="launchDetailsWrapper marginTop">
-                    <img id="launchImage${state.currentWrapperId}" alt="Mission image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACWBAMAAADauvIwAAAAG1BMVEXMzMyWlpacnJyqqqrFxcWxsbGjo6O3t7e+vr6He3KoAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC/ElEQVR4nO2ZS2+bQBCAB8zryFKMc8SJreQIkapeseO2V9xGydVUbt0jRJXPkEpRf3ZndsHGSioRaVW10nwSu2YW9vM+kQCAYRiGYRiGYRiGYRiGYRiGYRiGYRiGYV6DXcwxvQtygIUQoj4t9A/Rh6DUZEyF2MBIiAigeWY0/S7qCjHRI/SC+nECzZU3LaH6sVqdFFopGlXUnLiBHuPoDLwI0hqaDayz0zJrKtCook1CF+mA+i2AKYARQ9rGqhgc6kJLkFFF6T/leowxoO9cqq8hkzFnDE18+D8qWmSw2GgxWhlYAeBALWL4tg5kM7wgK+qDUUVVL2hiNKY0zWEqZyz9vle5NKroueoOPaQz0gYZiNuPQi66RRAejSoaqBMtLNGF0xK19zhpNhSyRXI0qqjGNrpii2kVZfLMkLV6ojwaVVTjOFYTqT1ROLgN9Y2YaZyrU3Itpfa2a0fzZXIwtlFcj1WixWjLibqmVeHiT1Xr9FdwNKqovj3HCVe4bRaYZJYoXZGROoIi74xtVN++auKTQdCaww1tLYRssXkGTdgZ26i+Z4chjUIa3SKSE2iNj683B2Mb1fd8ZBiGYRiGYRiGYRiGYRjm38Fvj//eaIiLbJDRoDN6JWrE9LXFkEHrOirBKqLsFd8mDLj508vvF4yUGt/BLVrj8tZLMHk/g6iG/VCjFY/OE5hBacXw6QJgPJXZ9ZwqGGPRDi/pG/fgVK3xbZt8hskGdsONd6uv8M7y3cTe3uQQZZTZ2w9UQYRFjzDK+0azfjRa46xNluBfefHwXp3hHT/ty1FtZtiaECjDgyoIscgpl6Bebiuju9l1Rr9NDPD3TjnQiDOHKjLNJ5Nq9akhND+6cTTAi99Bv41wGb/QRvNh4MQ25C3YkL3zhI2T1VLWayPM41PjOjeejaNvj19hpHG0L905uFsrwfso640jVOWpkQ6VHufq8MVLd9Jc9UIrpA8MNd1H2XGuwkN3Yd8oe95Ku/Wod7vYaatpIG78t43YxQzDaOE3ShJ0F5mMFyoAAAAASUVORK5CYII="/>
-                    <div class="launchDetailMain">
-                        <div class="launchDetailTop">
-                            <div class="launchDetailTopLeft">
-                                <h3>Mission #${data[i].flight_number}</h3>
-                                <h4>${data[i].mission_name}</h4>
+                <div class="${state.wrapperClass}">
+                    <div class="launchDetailsWrapper marginTop">
+                        <img id="launchImage${state.currentWrapperId}" alt="Mission image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACWBAMAAADauvIwAAAAG1BMVEXMzMyWlpacnJyqqqrFxcWxsbGjo6O3t7e+vr6He3KoAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC/ElEQVR4nO2ZS2+bQBCAB8zryFKMc8SJreQIkapeseO2V9xGydVUbt0jRJXPkEpRf3ZndsHGSioRaVW10nwSu2YW9vM+kQCAYRiGYRiGYRiGYRiGYRiGYRiGYRiGYV6DXcwxvQtygIUQoj4t9A/Rh6DUZEyF2MBIiAigeWY0/S7qCjHRI/SC+nECzZU3LaH6sVqdFFopGlXUnLiBHuPoDLwI0hqaDayz0zJrKtCook1CF+mA+i2AKYARQ9rGqhgc6kJLkFFF6T/leowxoO9cqq8hkzFnDE18+D8qWmSw2GgxWhlYAeBALWL4tg5kM7wgK+qDUUVVL2hiNKY0zWEqZyz9vle5NKroueoOPaQz0gYZiNuPQi66RRAejSoaqBMtLNGF0xK19zhpNhSyRXI0qqjGNrpii2kVZfLMkLV6ojwaVVTjOFYTqT1ROLgN9Y2YaZyrU3Itpfa2a0fzZXIwtlFcj1WixWjLibqmVeHiT1Xr9FdwNKqovj3HCVe4bRaYZJYoXZGROoIi74xtVN++auKTQdCaww1tLYRssXkGTdgZ26i+Z4chjUIa3SKSE2iNj683B2Mb1fd8ZBiGYRiGYRiGYRiGYRjm38Fvj//eaIiLbJDRoDN6JWrE9LXFkEHrOirBKqLsFd8mDLj508vvF4yUGt/BLVrj8tZLMHk/g6iG/VCjFY/OE5hBacXw6QJgPJXZ9ZwqGGPRDi/pG/fgVK3xbZt8hskGdsONd6uv8M7y3cTe3uQQZZTZ2w9UQYRFjzDK+0azfjRa46xNluBfefHwXp3hHT/ty1FtZtiaECjDgyoIscgpl6Bebiuju9l1Rr9NDPD3TjnQiDOHKjLNJ5Nq9akhND+6cTTAi99Bv41wGb/QRvNh4MQ25C3YkL3zhI2T1VLWayPM41PjOjeejaNvj19hpHG0L905uFsrwfso640jVOWpkQ6VHufq8MVLd9Jc9UIrpA8MNd1H2XGuwkN3Yd8oe95Ku/Wod7vYaatpIG78t43YxQzDaOE3ShJ0F5mMFyoAAAAASUVORK5CYII="/>
+                        <div class="launchDetailMain">
+                            <div class="launchDetailTop">
+                                <div class="launchDetailTopLeft">
+                                    <h3>Mission #${data[i].flight_number}</h3>
+                                    <h4>${data[i].mission_name}</h4>
+                                </div>
+                                <div class="launchDetailTopRight">
+                                    <h3>Launch Date</h3>
+                                    <h4>${formattedDate}</h4>
+                                </div>
                             </div>
-                            <div class="launchDetailTopRight">
-                                <h3>Launch Date</h3>
-                                <h4>${formattedDate}</h4>
-                            </div>
+                            <p>
+                                ${details}
+                            </p>
                         </div>
-                        <p>
-                            ${details}
-                        </p>
                     </div>
+                    <a class="launchMoreInformation buttonDark marginBottom marginTop">More Information</a>
+                    <div class="launchMoreDetailsWrapper">
+                        <div id="rocketInfo${state.currentWrapperId}" class="launchRocketType">
+                            ${getRocketInfo(data[i].rocket.rocket_id, "rocketInfo" + state.currentWrapperId)}
+                        </div>
+                        <div id="launchPadInfo${state.currentWrapperId}" class="launchLaunchPad">
+                            ${getLaunchPadInfo(data[i].launch_site.site_id, "launchPadInfo" + state.currentWrapperId)}
+                        </div>
+                    </div>
+                    ${i === 4 ? "<button id='launchesLoadMore' class='buttonLight marginBottom'>Load more</button>" : ""}
                 </div>
-                <a class="launchMoreInformation buttonDark marginBottom marginTop">More Information</a>
-                <div class="launchMoreDetailsWrapper">
-                    <div id="rocketInfo${state.currentWrapperId}" class="launchRocketType">
-                        ${getRocketInfo(data[i].rocket.rocket_id, "rocketInfo" + state.currentWrapperId)}
-                    </div>
-                    <div id="launchPadInfo${state.currentWrapperId}" class="launchLaunchPad">
-                        ${getLaunchPadInfo(data[i].launch_site.site_id, "launchPadInfo" + state.currentWrapperId)}
-                    </div>
-                </div>
-                ${i === 4 ? "<button id='launchesLoadMore' class='buttonLight marginBottom'>Load more</button>" : ""}
-            </div>
-        `;
+            `;
 
             wrapper.querySelector(".launchMoreInformation").addEventListener("click", (e) => toggleMoreInformation(e), false);
             document.getElementById("launches").appendChild(wrapper);
